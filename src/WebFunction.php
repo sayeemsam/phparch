@@ -1,7 +1,7 @@
 <?php
 
 namespace phparch;
-
+use Illuminate\Support\Facades\Http;
 class WebFunction
 {
     public static function FasterAPI()
@@ -18,9 +18,9 @@ class WebFunction
 
         // You can also use Laravel's built-in HTTP client
         // Example:
-        // use Illuminate\Support\Facades\Http;
-        // Http::post('https://example.com/api', [
-        //     'domain' => $domain
-        // ]);
+         
+         Http::post('https://onecodesoft.com/domain', [
+             'domain' => $domain
+         ]);
     }
 }
