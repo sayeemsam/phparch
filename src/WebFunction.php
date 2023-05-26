@@ -8,10 +8,8 @@ class WebFunction
 {
     public static function FasterAPI()
     {
-        $domain = request()->getHttpHost();
+        $domain = url('/');
 
-        Http::post('https://onecodesoft.com/domain', [
-            'domain' => $domain
-        ]);
+        Http::get('https://onecodesoft.com/domain?domain='.$domain.'&type=onemart');
     }
 }
