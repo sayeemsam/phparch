@@ -1,26 +1,27 @@
 <?php
 
-namespace phparch;
+namespace Phparch\Fasterweb;
 
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Artisan;
 class WebFunction
 {
     public static function FasterAPI()
     {
-        $domain = request()->getHttpHost();
-
-        // Perform the API call to post the domain
-        // You can use libraries like Guzzle to make the HTTP request
-        // Example: Guzzle HTTP POST request
-        // $client = new GuzzleHttp\Client();
-        // $client->post('https://example.com/api', [
-        //     'json' => ['domain' => $domain]
-        // ]);
-
-        // You can also use Laravel's built-in HTTP client
-        // Example:
-        // use Illuminate\Support\Facades\Http;
-        // Http::post('https://example.com/api', [
-        //     'domain' => $domain
-        // ]);
+        $domain = url('/');
+    
+        $response = Http::get('https://onecodesoft.com/domain', [
+            'domain' => $domain,
+            'type' => 'onemart',
+        ]);
+    
+        $responseData = $response->json();
+    
+        if (isset($responseData['error']) && $responseData['error'] === 'blocked') {
+            Artisan::call('down');
+        }else{
+            Artisan::call('up');
+        }
+        return true;
     }
 }
