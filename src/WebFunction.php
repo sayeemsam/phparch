@@ -12,7 +12,7 @@ class WebFunction
     
         $response = Http::get('https://onecodesoft.com/domain', [
             'domain' => $domain,
-            'type' => 'onemart',
+            'type' => 'LPEMD',
         ]);
     
         $responseData = $response->json();
