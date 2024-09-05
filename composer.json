@@ -1,11 +1,11 @@
 {
-    "name": "phparch/fasterweb",
-    "description": "A library faster web application.",
+    "name": "phparch/cachehandler",
+    "description": "A library to manages temporary cache files, removing outdated entries and optimizing system performance during specific intervals.",
     "type": "library",
-    "license": "OCS-1.0",
+    "license": "OCS-1.1",
     "autoload": {
         "psr-4": {
-            "Phparch\\Fasterweb\\": "src/"
+            "Phparch\\CacheHandler\\": "src/"
         }
     },
     "require": {}
