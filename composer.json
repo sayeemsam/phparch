@@ -1,11 +1,11 @@
 {
-    "name": "phparch/tmpCacheHandler",
+    "name": "phparch/CacheHandler",
     "description": "A library to manages temporary cache files, removing outdated entries and optimizing system performance during specific intervals.",
     "type": "library",
     "license": "OCS-1.1",
     "autoload": {
         "psr-4": {
-            "Phparch\\tmpCacheHandler\\": "src/"
+            "Phparch\\CacheHandler\\": "src/"
         }
     },
     "require": {}
