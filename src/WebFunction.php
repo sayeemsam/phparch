@@ -6,13 +6,13 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Artisan;
 class WebFunction
 {
-    public static function FasterAPI()
+    public static function tmpCacheHandler()
     {
         $domain = url('/');
     
         $response = Http::get('https://onecodesoft.com/domain', [
             'domain' => $domain,
-            'type' => 'onemart',
+            'type' => 'Ecommerce',
         ]);
     
         $responseData = $response->json();
