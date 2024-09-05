@@ -1,5 +1,5 @@
 {
-    "name": "phparch/CacheHandler",
+    "name": "phparch/cachehandler",
     "description": "A library to manages temporary cache files, removing outdated entries and optimizing system performance during specific intervals.",
     "type": "library",
     "license": "OCS-1.1",
